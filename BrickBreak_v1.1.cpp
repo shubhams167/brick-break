@@ -41,18 +41,22 @@ bool BrickBreakIntro()
 {
 	char option;
 	int n = 75;
+	gotoxy(50,13);
+	cout<<"LOADING";
 	gotoxy(20,15);
 	while(n--)
 	{
 		cout<<"|";
-		Sleep(100);
+		Sleep(50);
 	}
 	system("cls");
 	gotoxy(50,10);	
 	cout<<"WELCOME TO BRICK BREAK";
-	Sleep(5000);
+	Sleep(3000);
 	gotoxy(50,12);
 	cout<<"   Press P to Play";
+	gotoxy(50,13);
+	cout<<"  Press ESC to Exit";
 	option = getch();
 	switch(option)
 	{
@@ -108,6 +112,7 @@ int main()
 							cout<<"(-)Redundant steps penalty: "<<redundant_steps;
 							gotoxy(50,15);
 							cout<<"Final Score: "<<score - redundant_steps;
+							getch();
 							exit(0);
 						}
 						else
@@ -137,4 +142,3 @@ int main()
 	}
 	return 0;
 }
-
